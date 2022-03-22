@@ -19,7 +19,7 @@ sudo apt-get -y install libatlas-base-dev
 sudo apt-get -y install python-dev swig scons # for building WS2811 drivers
 
 echo "Install application"
-test -d moonboard || git clone https://github.com/8cH9azbsFifZ/moonboard.git
+test -d moonboard || git clone https://github.com/gmanca492/moonboard.git
 cd moonboard
 git pull
 
@@ -52,7 +52,7 @@ sudo chmod 644 /lib/systemd/system/moonboard-install.service
 sudo systemctl daemon-reload
 sudo systemctl enable moonboard-install.service
 
-echo "Restarting in 5 seconds to finalize changes. CTRL+C to cancel."
+#echo "Restarting in 5 seconds to finalize changes. CTRL+C to cancel."
 sleep 1 > /dev/null
 printf "."
 sleep 1 > /dev/null
@@ -63,4 +63,4 @@ sleep 1 > /dev/null
 printf "."
 sleep 1 > /dev/null
 printf " Restarting"
-sudo shutdown -r now
+#sudo shutdown -r now
