@@ -37,7 +37,7 @@ cd /home/pi/moonboard
 
 
 echo "Install DBUS service"
-sudo cp /home/pi/moonboard/ble/com.moonboard.conf /etc/dbus-1/system.d
+sudo cp /home/pi/moonboard/ble/com.moonboard.conf /etc/dbus-1/system.dshu
 sudo cp /home/pi/moonboard/ble/com.moonboard.service /usr/share/dbus-1/system-services/
 
 
