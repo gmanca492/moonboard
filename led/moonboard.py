@@ -95,7 +95,7 @@ class MoonBoard:
 
     def led_test(self):
         print("led test")
-        duration = 0.4
+        duration = 0.2
         COLORS = ['red', 'green', 'blue']
 
         for color in range(len(COLORS)):
