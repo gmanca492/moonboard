@@ -84,6 +84,8 @@ if __name__ == "__main__":
     print(f"Led mapping:{args.led_mapping}")
     print(f"Driver type:{args.driver_type}")
 
+    # run led test
+    MOONBOARD.led_test()
     MOONBOARD.clear()
 
     # connect to dbus signal new problem

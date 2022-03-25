@@ -92,7 +92,25 @@ class MoonBoard:
                     self.layout.set(self.MAPPING[h], color)
                     self.layout.push_to_driver()
                     time.sleep(duration/400)
-        
+
+    def led_test(self):
+        print("led test")
+        duration = 0.4
+        COLORS = ['red', 'green', 'blue']
+
+        for color in range(len(COLORS)):
+            for i in range(1,self.ROWS+1):
+                for j in range (0,self.COLS):
+                    le = chr(j+65)
+                    h = le+str(i)
+                    #print (h)
+                    self.layout.set(self.MAPPING[h], COLORS[color])
+                self.layout.push_to_driver()
+                time.sleep(duration)
+
+        time.sleep (1.2)
+        self.clear()
+
     def display_holdset(self, holdset="Hold Set A", duration=10, **kwds): 
         print ("Display holdset: " + str(holdset))
 
