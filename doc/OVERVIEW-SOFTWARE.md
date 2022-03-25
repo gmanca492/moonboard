@@ -30,3 +30,15 @@ To stop / restart the moonboard services (i.e. for debugging) use systemctl:
 *** FIXME ***
 
 The LED driver scripts are located in the folder LED. moonboard.py is invoked by the BLE service. Alternatively you can run moonboard.py directly, i.e. for LED strip installation or hold setup. 
+
+
+# Additional operations:
+
+Follow the first answer on this issue: https://stackoverflow.com/questions/59936665/bluez-crashes-after-pairing-an-with-my-ble-remote
+And modify the lib/systemd/system/bluetooth.service with ExecStart=/usr/lib/bluetooth/bluetoothd --compat --noplugin=sap -E
+In the /etc/bluetooth/main.conf set up:
+
+Privacy = off
+Config = le (not dual)
+
+TODO: add these configurations in the setup

@@ -12,14 +12,14 @@ import time
 import os
 
 class MoonBoard:
-    DEFAULT_PROBLEM_COLORS = {'START':COLORS.blue,'TOP':COLORS.red,'MOVES':COLORS.green}
+    DEFAULT_PROBLEM_COLORS = {'START':COLORS.green,'TOP':COLORS.red,'MOVES':COLORS.blue}
     DEFAULT_COLOR = COLORS.blue #FIXME ?
     X_GRID_NAMES = string.ascii_uppercase[0:11] # FIXME: del
-    ROWS = 18 
+    ROWS = 18
     COLS = 11
     DEFAULT_BRIGHTNESS = 100 # FIXME: to config file
-    SETUP = 'MoonboardMasters2017' # FIXME: to config file / Arg
-    DEFAULT_LED_MAPPING_FILE='led_mapping.json'
+    SETUP = 'Moonboard2016' # FIXME: to config file / Arg
+    DEFAULT_LED_MAPPING_FILE='led_mapping_sequential.json'
     # generate with {C+str(n+1):int(i*18+ (1-((-1)**(i%2)))/2*17 + ((-1)**(i%2))*n) for  i, C in enumerate(string.ascii_uppercase[0:11]) for n in range(18) }
     def __init__(self, 
                     driver_type, 

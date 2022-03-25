@@ -25,6 +25,8 @@ git pull
 
 # Installing python dependencies
 echo "Installing python dependencies"
+sudo apt install python3-gi
+sudo apt install  python3-dbus
 pip3 install -r install/requirements.txt
 sudo pip3 install -r install/requirements.txt 
 # pip3 uninstall -y -r install/requirements.txt # uninstall
